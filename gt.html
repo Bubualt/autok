@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="style.css">
+    <title>Porsche 911</title>
+</head>
+
+<body>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Audi</a>
+        <a href="aventador.html">Lamborghini</a>
+        <a href="gt.html">Porsche</a>
+        <a href="bmw.html">Bmw</a>
+      </div>
+      
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+      <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+        </script>
+    <div id="div1">
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="https://hd2.tudocdn.net/1050684?w=824&h=494" style="width:100%">
+
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="https://hips.hearstapps.com/hmg-prod/images/porsche-911-gt3-prototype-101-1606311791.jpg?crop=0.575xw:0.574xh;0.145xw,0.332xh&resize=1200:*" style="width:100%">
+
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="https://api.hvg.hu/Img/981ba3b7-9144-4244-a8b1-39094b1840d5/dcc492cc-34a9-41c3-84fd-7be36804d963.jpg" style="width:100%">
+
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
+
+<h2>Porsche 911</h2>
+<p>The Porsche 911 (pronounced Nine Eleven or in German: Neunelfer) is a two-door 2+2 high performance rear-engined sports car introduced in September 1964 by Porsche AG of Stuttgart, Germany. It has a rear-mounted flat-six engine and originally a torsion bar suspension. The car has been continuously enhanced through the years but the basic concept has remained unchanged.[1] The engines were air-cooled until the introduction of the 996 series in 1998.[2][3]
+
+    The 911 has been raced extensively by private and factory teams, in a variety of classes. It is among the most successful competition cars. In the mid-1970s, the naturally aspirated 911 Carrera RSR won world championship races including Targa Florio and the 24 Hours of Daytona. The 911-derived 935 turbo also won the 24 Hours of Le Mans in 1979. Porsche won the World Championship for Makes in 1976, 1977, 1978, and 1979 with 911-derived models.</p>
+<p>In a 1999 poll to determine the Car of the Century, the 911 was fifth.[4] It is one of two in the top five that had remained continuously in production (the original Beetle remained in production until 2003).[5] The one millionth example was manufactured in May 2017 and is in the company's permanent collection.[6]</p>
+
+<table style="width:100%">
+    <tr>
+      <th>Model</th>
+      <th>Year</th>
+    </tr>
+    <tr>
+      <td>911</td>
+      <td>1964–1989</td>
+
+    </tr>
+    <tr>
+      <td>930</td>
+      <td>1975–1989</td>
+
+    </tr>
+    <tr>
+        <td>964</td>
+        <td>1989–1994</td>
+  
+      </tr>
+      <tr>
+        <td>993 </td>
+        <td>1995–1998</td>
+  
+      </tr>
+      <tr>
+        <td>996</td>
+        <td>1999–2004</td>
+  
+      </tr>
+      <tr>
+        <td>997</td>
+        <td>2005–2012</td>
+  
+      </tr>
+  </table>
+    </div>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+</body>
+
+</html>

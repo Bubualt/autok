@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="style.css">
+    <title>Audi rs6</title>
+</head>
+
+<body>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Audi</a>
+        <a href="aventador.html">Lamborghini</a>
+        <a href="gt.html">Porsche</a>
+        <a href="bmw.html">Bmw</a>
+      </div>
+      
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+      <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+        </script>
+    <div id="div1">
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="https://cdn.motor1.com/images/mgl/GMN7G/s1/abt-audi-rs6-r.jpg" style="width:100%">
+
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="https://api.akker.nl/storage/images/2024/thumbnails/c6JRbRkiKzsDqVvSggtv4jJWDVilv78f2RNwoZyJ.RESIZED_1280_854_0.500000_0.500000_80.jpg" style="width:100%">
+
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="https://www.carscoops.com/wp-content/uploads/2022/06/Audi-RS6-Avant-tuning-a.jpg" style="width:100%">
+
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
+
+
+        <h2>Audi RS 6</h2>
+        <p>The Audi RS 6 is a high-performance variant of the Audi A6 range, produced by the high-performance subsidiary company Audi Sport GmbH, for its parent company Audi AG, a subsidiary of the Volkswagen Group, from 2002 onwards.
+        
+            The first and second versions of the RS 6 were offered in both Avant and saloon forms. The third and fourth generations are only offered as an Avant.</p>
+        
+        <br>
+<p>The "RS" initials are taken from the German: RennSport – literally translated as "racing sport", and is Audi's ultimate 'top-tier' high-performance trim level, positioned a noticeable step above the "S" model specification level of Audi's regular model range line-up. Like all Audi "RS" models, the RS 6 pioneers some of Audi's newest and most advanced engineering and technology, and so could be described as a halo vehicle, with the latest RS 6 Performance having the equal most powerful internal combustion engine out of all Audi models, with the same horsepower and torque as the physically larger Audi S8 Plus. Unlike the A6 and S6, however, the RS 6's engines in the C5 and C6 iterations have not been shared with any other vehicle in Audi's lineup. However, for the C7 generation, the Audi RS 6 has the same 4.0L bi-turbo V8 engine as the Audi RS 7, with both being positioned at the top of the Audi S and RS range, and detuned variants of the same engines are found in the Audi S8, Audi A8, and Audi S6.
+
+    Based on the A6 platform, the RS 6's engines are front-mounted and longitudinally oriented, while the transmission is mounted immediately at the rear of the engine in a longitudinal orientation, in the form of a transaxle. Like all S and RS models, the RS 6 is only available with Audi's 'trademark' Torsen-based quattro permanent four-wheel drive system.</p>        
+
+
+
+    </div>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+</body>
+
+</html>

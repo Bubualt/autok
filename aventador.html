@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="style.css">
+    <title>Lamborghini Aventador</title>
+</head>
+
+<body>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Audi</a>
+        <a href="aventador.html">Lamborghini</a>
+        <a href="gt.html">Porsche</a>
+        <a href="bmw.html">Bmw</a>
+      </div>
+      
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+      <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+        </script>
+      <br>
+
+    <div id="div1">
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="https://s.aolcdn.com/dims-global/dims3/GLOB/legacy_thumbnail/640x360/quality/70/https://s.aolcdn.com/commerce/autodata/images/USD20LGC041A01300.jpg" style="width:100%">
+
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="https://robbreport.com/wp-content/uploads/2021/07/1-4.jpg" style="width:100%">
+
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="https://www.carscoops.com/wp-content/uploads/2023/02/Lamborghini-Aventador-Successor-By-Hycade-3.jpg" style="width:100%">
+
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
+<h2>Lamborghini Aventador</h2>
+<p>The Lamborghini Aventador (Spanish pronunciation: [aβentaˈðoɾ]) is a mid-engine sports car produced by the Italian automotive manufacturer Lamborghini. In keeping with Lamborghini tradition, the Aventador is named after a Spanish fighting bull that fought in Zaragoza, Aragón, in 1993.[7][8][9] The Aventador is the successor to the Murciélago and was made by hand in Sant'Agata Bolognese, Italy.</p>
+<p>The Aventador launched on 28 February 2011 at the Geneva Motor Show, five months after its initial unveiling in Sant'Agata Bolognese, the vehicle, internally codenamed LB834, was designed to replace the then-decade-old Murciélago as the new flagship model.[10][11][12]
+
+    Soon after the Aventador's unveiling, Lamborghini announced that it had sold 12 cars, with deliveries starting in the second half of 2011.[13] By March 2016, Lamborghini had built 5,000 Aventadors. They are some of the bestselling Lamborghinis.[14]</p>
+
+
+    </div>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+</body>
+
+</html>
